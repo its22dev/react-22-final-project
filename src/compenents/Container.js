@@ -1,8 +1,7 @@
-import { useState } from "react";
 import Cart from "./Cart";
 import List from "./List";
 
-const Container = () => {
+const Container = ({ }) => {
   return <div className="container mt-4">
     <div className="row">
       <List />
