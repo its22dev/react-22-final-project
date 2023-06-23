@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../Store";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = ({ }) => {
@@ -15,16 +15,52 @@ const Navbar = ({ }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to='/'>Home</Link>
+              <NavLink
+                className="nav-link"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? 'gray' : '',
+                  }
+                }}
+                to='/'>
+                Home
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to='/about'>About</Link>
+              <NavLink
+                className="nav-link"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? 'gray' : '',
+                  }
+                }}
+                to='/about'>
+                About
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to='/products'>Product</Link>
+              <NavLink
+                className="nav-link"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? 'gray' : '',
+                  }
+                }}
+                to='/products'>
+                Product
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to='/album'>Album</Link>
+              <NavLink
+                className="nav-link"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? 'gray' : '',
+                  }
+                }}
+                to='/album'>
+                Album
+              </NavLink>
             </li>
           </ul>
           <button className="btn btn-outline-success position-relative" type="submit">
