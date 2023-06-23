@@ -6,6 +6,7 @@ import Album from './pages/Album';
 import AlbumIndex from './pages/album/AlbumIndex';
 import AlbumPhoto from './pages/album/AlbumPhoto';
 import AlbunSearch from './pages/album/AlbumSearch';
+import NotFound from './pages/NotFound';
 
 
 const Container = ({ }) => {
@@ -20,6 +21,7 @@ const Container = ({ }) => {
           <Route path=':id' element={<AlbumPhoto />} />
           <Route path='search' element={<AlbunSearch />} />
         </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   </div>
