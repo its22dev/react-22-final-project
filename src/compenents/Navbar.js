@@ -23,6 +23,9 @@ const Navbar = ({ }) => {
             <li className="nav-item">
               <Link className="nav-link" to='/products'>Product</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to='/album'>Album</Link>
+            </li>
           </ul>
           <button className="btn btn-outline-success position-relative" type="submit">
             購物車
