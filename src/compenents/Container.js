@@ -4,6 +4,9 @@ import About from './pages/About'
 import ProductList from './pages/ProductList';
 import Album from './pages/Album';
 import AlbumIndex from './pages/album/AlbumIndex';
+import AlbumPhoto from './pages/album/AlbumPhoto';
+import AlbunSearch from './pages/album/AlbumSearch';
+
 
 const Container = ({ }) => {
   return <div className="container mt-4">
@@ -14,6 +17,8 @@ const Container = ({ }) => {
         <Route path='/products' element={<ProductList />} />
         <Route path='/album' element={<Album />} >
           <Route index element={<AlbumIndex />} />
+          <Route path=':id' element={<AlbumPhoto />} />
+          <Route path='search' element={<AlbunSearch />} />
         </Route>
       </Routes>
     </div>

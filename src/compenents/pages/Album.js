@@ -1,31 +1,16 @@
-import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
-import axios from "axios";
-
-const api = "https://api.unsplash.com/search/photos";
-const accessId = process.env.REACT_APP_UNSPLASH_ACCESS;
+import { Link, Outlet } from "react-router-dom";
 
 const Album = ({ }) => {
-  const [dataList, setDataList] = useState([])
-  useEffect(() => {
-    (async () => {
-      const res = await axios.get(`${api}?client_id=${accessId}&query=camera`);
-      const { results } = res.data
-      setDataList(results);
-    })();
-  }, [])
 
-  return (<div className="row">
-    <div className="col-4">
-      Album nav
-      {dataList.map((item) => {
-        return <li key={item.id}>{item.id}</li>
-      })}
+  return (
+    <div className="row">
+      <div className="col-4">
+        <Link to='search' >搜尋照片</Link>
+      </div>
+      <div className="col-8">
+        <Outlet/>
+      </div>
     </div>
-    <div className="col-8">
-      <Outlet context={dataList} />
-    </div>
-  </div>
   )
 }
 
